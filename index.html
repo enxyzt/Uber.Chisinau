@@ -20,9 +20,9 @@
                     <li class="menu_item"><a href="#" class="menu_link">Principala</a></li>
                     <li class="menu_item"><a href="#require" class="menu_link">Automobilul companiei</a></li>
                     <li class="menu_item"><a href="#require" class="menu_link">Automobilul propriu</a></li>
-                    <li class="menu_item"><a href="#" class="menu_link">Cerinte</a></li>
+                    <li class="menu_item"><a href="#requir" class="menu_link">Cerinte</a></li>
                     <li class="menu_item"><a href="#" class="menu_link">Contacte</a></li>
-                    <li class="menu_item"><a href="#" class="menu_link">Trimiteți cerere</a></li>
+                    <li class="menu_item"><a href="#" id="modalMenu" class="menu_link">Trimiteți cerere</a></li>
                 </ul>
             </div>
             <div class="hamburger">
@@ -46,7 +46,7 @@
     
                     <div class="col-6 col-md-3">
                         <a href="tel:+373060123456" class="xs-visible subheader_phone">0 601 23 456</a>
-                        <button class="subheader_btn">Comanda un apel</button>
+                        <button id="myBtn" class="subheader_btn">Comanda un apel</button>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                         <br><br>
                         Suntem unul dintre parteneri și ne-am impus ca una dintre cele mai bune echipe din orașul Chisinau. Șoferii noștri câștigă de la 15.000 la 25.000 lei pe lună.
                     </div>
-                    <button class="promo_btn">TRIMITE O CERERE!</button>
+                    <button id="cerere" class="promo_btn">TRIMITE O CERERE!</button>
                 </div>
             </div>
         </div>
@@ -311,7 +311,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" id="requir">
                 <div class="require_block require_block_nmb warning">
                     <div class="require_title">
                         CERINŢE:
@@ -388,7 +388,7 @@
                     <a href="#" class="footer_social_item">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="#" class="footer_social_item">
+                    <a href="https://www.instagram.com/lungumaxim/" class="footer_social_item">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
@@ -401,11 +401,11 @@
                         <a href="#">pentru șoferi</a>
                     </div>
                     <div class="footer_links_sub">
-                        <a href="#">centru<br> de asistență</a>
+                        <a href="https://help.uber.com/">centru<br> de asistență</a>
                         <a href="#">posturi<br> vacante</a>
-                        <a href="#">dezvoltatori</a>
-                        <a href="#">blog</a>
-                        <a href="#">despre noi</a>
+                        <a href="https://developer.uber.com/">dezvoltatori</a>
+                        <a href="https://eng.uber.com/">blog</a>
+                        <a href="https://www.uber.com/us/en/about/">despre noi</a>
                     </div>
                     <a href="#" class="footer_links_lang">Romana</a>
                 </div>
@@ -415,7 +415,7 @@
                     <a href="#">
                         <img src="img/app_store.png" alt="App Store">
                     </a>
-                    <a href="#">
+                    <a href="https://play.google.com/store/apps/details?id=com.ubercab" target="_blank">
                         <img src="img/google_play.png" alt="Google play">
                     </a>
                     <a href="#">
@@ -426,6 +426,85 @@
         </div>
     </footer>
 
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="container">
+        <div style="text-align:center">
+          <h2>Contact Us</h2>
+          <p>Lasati datele de contact, iar noi va apelam in jur de o ora!</p>
+        </div>
+        <div class="row">
+          <div class="column">
+           
+          </div>
+          <div class="column">
+              <label for="fname">Nume</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <label for="number">Numar de telefon</label>
+              <input type="number" id="number" name="lastname" placeholder="Numarul de telefon">
+              <label for="city">City</label>
+              <select id="city" name="city">
+                <option value="australia">Chisinau</option>
+                <option value="canada">Balti</option>
+                <option value="usa">Orhei</option>
+              </select>
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+              <input type="submit" value="Submit">
+          </div>
+        </div>
+      </div>
+  </div>
+
+</div>
+<div id="modalCere" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="container">
+          <div style="text-align:center">
+            <h2>Trimite o cerere</h2>
+            <p>Lasati datele de contact, iar noi va apelam in jur de o ora!</p>
+          </div>
+          <div class="row">
+            <div class="column">
+             
+            </div>
+            <div class="column">
+                <label for="fname">Nume</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Prenume</label>
+                <input type="text" id="lname" name="lasttname" placeholder="Your last name..">
+                <label for="number">Numar de telefon</label><br>
+                <input type="number" id="number" name="lastname" placeholder="Numarul de telefon">
+                <br>
+                <br>
+                <h2>Incarcati urmatoarele fisiere:</h2>
+                <ul>
+                    <li>Imagine portret a soferului 3x4</li>
+                    <li>Imagine cu primele 3 pagini a pasaportului</li>
+                    <li>Imagine cu ambele parti a permisului de conducere</li>
+
+                </ul>
+                <label for="myfile">Select files:</label>
+  <input type="file" id="myfile" name="myfile" multiple><br><br>
+                
+               
+                <input type="submit" value="Submit">
+            </div>
+          </div>
+        </div>
+    </div>
+  
+  </div>
+
     <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 </html>
